@@ -29,7 +29,7 @@
 
 ### 🟣 AI/ML Developer Intern — [Campayn](https://github.com/ydvlalit03) `(Remote · Apr 2026 – May 2026)`
 - Shipped **dashboards, campaign workflows, auth systems and analytics platforms** straight from PRDs using Claude Code
-- Integrated the **Instagram Graph API** with fallback scraping for real-time metrics (views, reach, saves, watch-time), deployed on **Railway**
+- Integrated the **Instagram Graph API** with fallback scraping for real-time metrics (views, reach, saves, watch-time)
 - Automated **Instagram/LinkedIn comment-to-DM flows**, webhook handling and API integrations — cutting manual ops effort
 
 ### 🟣 AI/ML Developer Intern — Leadfreak `(On-site · Dec 2025 – Mar 2026)`
