@@ -15,13 +15,58 @@
 
 ---
 
-## 🧠 About Me
+## 🧠 about_me.py
 
-- 🎓 **B.S + M.S @ IIT Roorkee** (2022–2027) — specializing in Generative AI & LLM application development
-- 🤖 I build **RAG pipelines, multi-agent systems, and custom LLM-powered tools** end to end
-- ⚙️ Comfortable across the stack: **FastAPI** & **Next.js/React** products backed by vector databases and LLM orchestration
-- 🧪 Philosophy: *make LLMs reliable — eval over vibes, ground truth over guessing*
-- 📫 Reach me at **lalit@ph.iitr.ac.in**
+```python
+from functools import wraps
+
+
+def ships(stage: str):
+    """Nothing leaves the bench until it's been through here."""
+    def deco(fn):
+        @wraps(fn)
+        def wrapper(*args, **kwargs):
+            return f"{fn(*args, **kwargs)} → {stage} ✅"
+        return wrapper
+    return deco
+
+
+class LalitYadav:
+    """AI engineer — makes LLMs reliable in prod, not just pretty in a demo."""
+
+    def __init__(self) -> None:
+        self.role   = "AI / ML Engineer"
+        self.school = "IIT Roorkee · B.S + M.S (2022–2027)"
+        self.focus  = ["RAG pipelines", "multi-agent systems", "full-stack LLM apps"]
+        self.stack  = {
+            "agents":   ["LangGraph", "LangChain", "Gemini", "Groq"],
+            "backend":  ["FastAPI", "PostgreSQL", "Docker", "AWS"],
+            "frontend": ["React", "Next.js", "TypeScript", "Tailwind"],
+        }
+        self._coffee = float("inf")  # ☕
+
+    @property
+    def currently_building(self) -> str:
+        return "TravelOS — AI agents + CRM for travel agencies"
+
+    @property
+    def philosophy(self) -> str:
+        return "eval over vibes · ground truth over guessing"
+
+    @ships("production")
+    def build(self, idea: str) -> str:
+        return f"{idea} → tested"
+
+    def __repr__(self) -> str:
+        return "<Lalit: ship fast · eval faster · build things that actually work>"
+
+
+me = LalitYadav()
+print(me.build("a wild idea"))   # a wild idea → tested → production ✅
+print(me)                        # <Lalit: ship fast · eval faster ...>
+```
+
+> 📫 reach me at **lalit@ph.iitr.ac.in**
 
 ---
 
